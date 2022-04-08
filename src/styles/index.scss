@@ -1,0 +1,121 @@
+@import "~bootstrap/scss/bootstrap.scss";
+
+// @font-face {
+//     font-family: Halloween;
+//     src: url(../fonts/Halloween_Morning.ttf);
+// }
+body {
+    // background-image: url("https://images.unsplash.com/photo-1538333581680-29dd4752ddf2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+    background-image: url("../img/anders-wideskott-_QnPkc4C6E4-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100vh;
+}
+.container-maquina {
+    
+    margin-top: 170px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: 331px;
+
+}
+
+.palo {
+    position: absolute;
+    right: 1%;
+    top: 33%;
+}
+
+.palo_animation {
+    position: absolute;
+    right: 1%;
+    top: 33%;
+    animation-duration: 2s;
+    animation-name: tirada;
+}
+@keyframes tirada {
+    // 20% {
+    //     transform: rotate(45deg);
+    //     right: -11%;
+    //     top: 38%;
+    //   }
+
+    10% {
+        position: absolute;
+        transform: rotate(30deg);
+        right: -8%;
+        top: 36%;
+    }
+    50% {
+        position: absolute;
+        transform: rotate(80deg);
+        right: -14%;
+        top: 45%;
+    }
+    70% {
+        transform: rotate(45deg);
+        right: -11%;
+        top: 38%;
+    }
+}
+
+a {
+    cursor: pointer;
+}
+
+.container-palos {
+    position: absolute;
+    width: 220px;
+    height: 100px;
+    top: 42%;
+    left: 10%;
+    // border: 1px solid black;
+    background-color: white;
+
+   
+}
+.container-palo-arriba {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.container-palo-centro {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.container-palo-abajo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.palo-centro {
+    width: 33px;
+    height: 33px;
+}
+.flash {
+    position: absolute;
+    width: 37px;
+    height: 33px;
+    top: 1%;
+    left: 38%;
+    border-radius: 50%;
+    animation-name: flash;
+    animation-duration: 5s;
+}
+
+@keyframes flash {
+    0%, 10%, 20%, 30%, 40%, 50%, 60%, 70%, 80%, 90%, 100% {
+    background-color: red;
+    box-shadow: 0px 0px 100px 100px red;
+    }
+   5%,15%,25%,35%,45%, 55%, 65%, 75%, 85%, 95% {
+    background-color: transparent;
+    box-shadow: 0px 0px 0px;
+    }
+   }
+   
+
+
+
